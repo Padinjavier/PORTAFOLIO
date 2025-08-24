@@ -23,9 +23,6 @@ document.addEventListener("DOMContentLoaded", () => {
 // Proyectos
 document.addEventListener("DOMContentLoaded", () => {
   const username = "Padinjavier";
-  // ❌ No uses token si solo quieres repos públicos
-  // const token = "ghp_xxx";
-
   fetch(`https://api.github.com/users/${username}/repos?sort=updated`)
     .then(async res => {
       if (!res.ok) {
@@ -47,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const col = document.createElement("div");
         col.className = "col d-flex justify-content-center";
 
-        const imageUrl = `https://raw.githubusercontent.com/${username}/${repo.name}/main/preview.png`;
+        const imageUrl = `https://raw.githubusercontent.com/${username}/${repo.name}/refs/heads/main/preview.png`;
 
    console.log(imageUrl);
         col.innerHTML = `
