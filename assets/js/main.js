@@ -70,3 +70,10 @@ document.addEventListener("DOMContentLoaded", () => {
         .catch(err => console.error("Error al obtener repos:", err));
 });
 // End proyectos
+
+
+  document.querySelectorAll('.faq-question').forEach(btn => {
+    btn.addEventListener('click', () => {
+      btn.parentElement.classList.toggle('active');
+    });
+  });
