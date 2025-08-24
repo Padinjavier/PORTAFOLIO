@@ -52,12 +52,16 @@ document.addEventListener("DOMContentLoaded", () => {
                         onerror="this.style.display='none'" 
                         style="width:100%;max-width:350px;height:200px;object-fit:cover;border-radius:12px;">
                             <h6 class="mt-2">${repo.name}</h6>
+                            <p class="text-muted">${repo.description || "Sin descripción"}</p>
+                             <a href="${repo.html_url}" 
+                                target="_blank"
+                                <i class="bi bi-github fs-3"></i>
+                            </a>
                     </div>
                     `;
 
                 container.appendChild(col);
             }
-
 
             // 🔹 Rellenar espacios vacíos
             for (let i = 0; i < fillerNeeded; i++) {
@@ -72,8 +76,8 @@ document.addEventListener("DOMContentLoaded", () => {
 // End proyectos
 
 
-  document.querySelectorAll('.faq-question').forEach(btn => {
+document.querySelectorAll('.faq-question').forEach(btn => {
     btn.addEventListener('click', () => {
-      btn.parentElement.classList.toggle('active');
+        btn.parentElement.classList.toggle('active');
     });
-  });
+});
