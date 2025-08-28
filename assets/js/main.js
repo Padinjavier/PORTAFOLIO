@@ -19,10 +19,23 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-
 // Proyectos
 document.addEventListener("DOMContentLoaded", () => {
     const username = "Padinjavier";
+
+    // 🔹 Lista de repos que SÍ quieres mostrar
+    const reposPermitidos = [
+        "API-RICK-AND-MORTY",
+        "MediPie",
+        "vivetuaventura",
+        "market.v2",
+        "market",
+        "Portal_MDQ"
+    ];
+
+    // 🔹 Ruta de tu imagen fallback (sin rutas de C:)
+    const fallbackImage = "./assets/images/proyectos/enproceso.png";
+
     fetch(`https://api.github.com/users/${username}/repos?sort=updated`)
         .then(async res => {
             if (!res.ok) {
@@ -38,25 +51,34 @@ document.addEventListener("DOMContentLoaded", () => {
 
             const container = document.getElementById("repos");
             const cols = 5;
-            const fillerNeeded = (cols - (repos.length % cols)) % cols;
 
-            for (let repo of repos) {
+            // 🔹 Filtrar solo los que estén en tu lista
+            const reposFiltrados = repos.filter(repo =>
+                reposPermitidos.includes(repo.name)
+            );
+
+            const fillerNeeded = (cols - (reposFiltrados.length % cols)) % cols;
+
+            for (let repo of reposFiltrados) {
                 const col = document.createElement("div");
                 col.className = "col-md-4 d-flex justify-content-center"; // 👈 3 columnas
 
                 const imageUrl = `https://raw.githubusercontent.com/${username}/${repo.name}/refs/heads/main/preview.png`;
 
                 col.innerHTML = `
-                    <div class="repo-card p-2 text-center">
+                    <div class="repo-card p-2 text-center card-proyect elevar-card">
+                     <div>      
                         <img src="${imageUrl}" alt="${repo.name}" 
-                        onerror="this.style.display='none'" 
-                        style="width:100%;max-width:350px;height:200px;object-fit:cover;border-radius:12px;">
-                            <h6 class="mt-2">${repo.name}</h6>
-                            <p class="text-muted">${repo.description || "Sin descripción"}</p>
-                             <a href="${repo.html_url}" 
-                                target="_blank"
-                                <i class="bi bi-github fs-3"></i>
-                            </a>
+                            onerror="this.onerror=null;this.src='${fallbackImage}'" 
+                            style="width:100%;max-width:350px;height:200px;object-fit:cover;border-radius:12px;">
+                        <h6 class="mt-2">${repo.name}</h6>
+                        <p class="text-muted">${repo.description || "Sin descripción"}</p>
+                    </div>
+                    <div>
+                        <a href="${repo.html_url}" target="_blank">
+                            <i class="bi bi-github fs-3"></i>
+                        </a>
+                    </div>
                     </div>
                     `;
 
@@ -74,6 +96,7 @@ document.addEventListener("DOMContentLoaded", () => {
         .catch(err => console.error("Error al obtener repos:", err));
 });
 // End proyectos
+
 
 
 document.querySelectorAll('.faq-question').forEach(btn => {
