@@ -5,15 +5,7 @@
  * Copyright 2011-2023 The Bootstrap Authors
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
-/* 
- --bs-gray-100
---bs-black
---bs-white
 
---bs-tertiary-color
---bs-blue
---bs-teal
- */
 
 :root[data-theme="light"] {
     --bs-gray-100: #f8f9fa;
@@ -93,7 +85,7 @@
     /* --bs-body-font-size: 1rem; */
     /* --bs-body-font-weight: 400; */
     /* --bs-body-line-height: 1.5; */
-    /* --bs-body-color: #212529; */
+    --bs-body-color: #212529;
     /* --bs-body-color-rgb: 33, 37, 41; */
     /* --bs-body-bg: #fff; */
     /* --bs-body-bg-rgb: 255, 255, 255; */
@@ -143,7 +135,7 @@
     --bs-gray-100: #f8f9fa;
     --bs-black: #000000;
     --bs-white: #1f2020;
-    --bs-tertiary-color: rgba(33, 37, 41, 0.5);
+    --bs-tertiary-color: rgba(197, 201, 204, 0.5);
     --bs-blue: #0d6efd;
     --bs-teal: #20c997;
 
@@ -160,7 +152,7 @@
 
 
     /* color-scheme: dark; */
-    /* --bs-body-color: #dee2e6; */
+    --bs-body-color: #dee2e6;
     /* --bs-body-color-rgb: 222, 226, 230; */
     /* --bs-body-bg: #212529; */
     /* --bs-body-bg-rgb: 33, 37, 41; */
@@ -13939,10 +13931,6 @@ fieldset:disabled .btn {
 /* ------------------------------------------------------------------- */
 
 
-body {
-    background-color: var(--bs-gray-100);
-    color: var(--bs-black);
-}
 
 .navbar {
     background-color: var(--bs-white) !important;
@@ -14219,7 +14207,6 @@ body {
 
 .timeline-meta .company {
     font-weight: 700;
-    color: var(--bs-black);
 }
 
 .timeline-meta .dates {
@@ -14326,7 +14313,7 @@ body {
     border: none;
     font-size: 1.1rem;
     font-weight: 600;
-    color: var(--bs-black);
+    color: var(--bs-body-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -14354,7 +14341,6 @@ body {
 .faq-answer p {
     margin: 0;
     padding: 10px 0;
-    color: var(--bs-black);
     font-size: .95rem;
     line-height: 1.5;
 }
