@@ -1,0 +1,232 @@
+[
+  {
+    "entidad": "CISCO",
+    "tipo": "CURSO",
+    "activo": "SI",
+    "nombre_curso": "INTRODUCTION TO INTERNET OF THINGS",
+    "fecha": "2025-08-05",
+    "link": "https://drive.google.com/file/d/1Cv9BRv6gAnw4knX0s0oeBQz-Ds-GIptd/view?usp=drive_link",
+    "img": "https://media.licdn.com/dms/image/v2/D560BAQFYnR_Zrm87Dg/company-logo_200_200/B56ZnMyVr4HUAI-/0/1760077372453/cisco_logo?e=1762387200&v=beta&t=QDGzIfhUU14IFnUUWFGE8Zi3aJWH9Ji7RVghZ7_NlSA",
+    "icono": "<i class=\"bi bi-pci-card-network\"></i>"
+  },
+  {
+    "entidad": "CISCO",
+    "tipo": "CURSO",
+    "activo": "SI",
+    "nombre_curso": "INTRODUCTION TO CYBERSECURITY",
+    "fecha": "2025-08-03",
+    "link": "https://drive.google.com/file/d/1FU4s68pNY3YbtNtscVdjQS-IfiGd0eW6/view?usp=drive_link",
+    "img": "https://media.licdn.com/dms/image/v2/D560BAQFYnR_Zrm87Dg/company-logo_200_200/B56ZnMyVr4HUAI-/0/1760077372453/cisco_logo?e=1762387200&v=beta&t=QDGzIfhUU14IFnUUWFGE8Zi3aJWH9Ji7RVghZ7_NlSA",
+    "icono": "<i class=\"bi bi-shield-check\"></i>"
+  },
+  {
+    "entidad": "DATUX",
+    "tipo": "CURSO",
+    "activo": "SI",
+    "nombre_curso": "1ER CONGRESO: IA & DATA CONFERENCE 2025",
+    "fecha": "2025-08-16",
+    "link": "https://drive.google.com/file/d/1QixC9FIXXXjKNnv140c3nqBTcDcxFIS1/view?usp=drive_link",
+    "img": "https://media.licdn.com/dms/image/v2/D4E0BAQGBuN6v2jK4ig/company-logo_200_200/company-logo_200_200/0/1703799255347?e=1762387200&v=beta&t=K2UzlRkvQxZGjAfnDn2jzYG1zGepsxeFpODVbfGsSD8",
+    "icono": "<i class=\"bi bi-alexa\"></i>"
+  },
+  {
+    "entidad": "GRUPO ROMERO",
+    "tipo": "CURSO",
+    "activo": "NO",
+    "nombre_curso": "COMUNICACION ASERTIVA",
+    "fecha": "2025-07-25",
+    "link": "https://drive.google.com/file/d/1Cd1IFGyxo4fpmKxYHFAYGaRxxw7J_qSC/view?usp=drive_link",
+    "img": "https://media.licdn.com/dms/image/v2/C4E0BAQEx0sz4dgwPJQ/company-logo_200_200/company-logo_200_200/0/1630646456004/fundacion_romero_logo?e=1762387200&v=beta&t=L_sm7wwYWigl2d5OoYd4ls5-cz23Z4XNx2kZMI6Zfic",
+    "icono": "-"
+  },
+  {
+    "entidad": "GRUPO ROMERO",
+    "tipo": "CURSO",
+    "activo": "NO",
+    "nombre_curso": "COMUNICACION CORPORATIVA Y PALABRAS MAYORES",
+    "fecha": "2025-07-25",
+    "link": "https://drive.google.com/file/d/1zXsS9o7pUzzggigMrbOdJfEN9ZQEUXMR/view?usp=drive_link",
+    "img": "https://media.licdn.com/dms/image/v2/C4E0BAQEx0sz4dgwPJQ/company-logo_200_200/company-logo_200_200/0/1630646456004/fundacion_romero_logo?e=1762387200&v=beta&t=L_sm7wwYWigl2d5OoYd4ls5-cz23Z4XNx2kZMI6Zfic",
+    "icono": "-"
+  },
+  {
+    "entidad": "GRUPO ROMERO",
+    "tipo": "CURSO",
+    "activo": "NO",
+    "nombre_curso": "COMO MANEJAR MI NEGOCIO",
+    "fecha": "2025-02-01",
+    "link": "https://drive.google.com/file/d/1mV8HetlSNZJJD3wPsOm_f0X4mCFQmtVf/view?usp=drive_link",
+    "img": "https://media.licdn.com/dms/image/v2/C4E0BAQEx0sz4dgwPJQ/company-logo_200_200/company-logo_200_200/0/1630646456004/fundacion_romero_logo?e=1762387200&v=beta&t=L_sm7wwYWigl2d5OoYd4ls5-cz23Z4XNx2kZMI6Zfic",
+    "icono": "-"
+  },
+  {
+    "entidad": "GRUPO ROMERO",
+    "tipo": "CURSO",
+    "activo": "NO",
+    "nombre_curso": "CLIMA Y CULTURA ORGANIZACIONAL",
+    "fecha": "2025-01-31",
+    "link": "https://drive.google.com/file/d/1SWwKpSUBwuk5xBuba5b8_cW5h6NaXV7n/view?usp=drive_link",
+    "img": "https://media.licdn.com/dms/image/v2/C4E0BAQEx0sz4dgwPJQ/company-logo_200_200/company-logo_200_200/0/1630646456004/fundacion_romero_logo?e=1762387200&v=beta&t=L_sm7wwYWigl2d5OoYd4ls5-cz23Z4XNx2kZMI6Zfic",
+    "icono": "-"
+  },
+  {
+    "entidad": "GRUPO ROMERO",
+    "tipo": "CURSO",
+    "activo": "NO",
+    "nombre_curso": "HERRAMIENTAS PARA LA COMUNICACION INTERNA",
+    "fecha": "2025-01-31",
+    "link": "https://drive.google.com/file/d/1tMYIepm43Q1J74B7M7N3yK4C8ZvmEEew/view?usp=drive_link",
+    "img": "https://media.licdn.com/dms/image/v2/C4E0BAQEx0sz4dgwPJQ/company-logo_200_200/company-logo_200_200/0/1630646456004/fundacion_romero_logo?e=1762387200&v=beta&t=L_sm7wwYWigl2d5OoYd4ls5-cz23Z4XNx2kZMI6Zfic",
+    "icono": "-"
+  },
+  {
+    "entidad": "GRUPO ROMERO",
+    "tipo": "CURSO",
+    "activo": "NO",
+    "nombre_curso": "HOSPITALITY",
+    "fecha": "2025-01-31",
+    "link": "https://drive.google.com/file/d/1CS2TCLU-MHPqYLDiFy0eYx5E_2rx8l0d/view?usp=drive_link",
+    "img": "https://media.licdn.com/dms/image/v2/C4E0BAQEx0sz4dgwPJQ/company-logo_200_200/company-logo_200_200/0/1630646456004/fundacion_romero_logo?e=1762387200&v=beta&t=L_sm7wwYWigl2d5OoYd4ls5-cz23Z4XNx2kZMI6Zfic",
+    "icono": "-"
+  },
+  {
+    "entidad": "GRUPO ROMERO",
+    "tipo": "CURSO",
+    "activo": "NO",
+    "nombre_curso": "INTRAPRENEURSHIP Y MENTALIDAD DE CRECIMIENTO",
+    "fecha": "2025-01-31",
+    "link": "https://drive.google.com/file/d/19kiwi_VSxALDinUMiTDsqjO829-upqM2/view?usp=drive_link",
+    "img": "https://media.licdn.com/dms/image/v2/C4E0BAQEx0sz4dgwPJQ/company-logo_200_200/company-logo_200_200/0/1630646456004/fundacion_romero_logo?e=1762387200&v=beta&t=L_sm7wwYWigl2d5OoYd4ls5-cz23Z4XNx2kZMI6Zfic",
+    "icono": "-"
+  },
+  {
+    "entidad": "GRUPO ROMERO",
+    "tipo": "CURSO",
+    "activo": "NO",
+    "nombre_curso": "MANEJO DE ESTRES",
+    "fecha": "2025-01-31",
+    "link": "https://drive.google.com/file/d/1YAt_ghQB8yidOH3N6LSFEI5Sj8s_VdmD/view?usp=drive_link",
+    "img": "https://media.licdn.com/dms/image/v2/C4E0BAQEx0sz4dgwPJQ/company-logo_200_200/company-logo_200_200/0/1630646456004/fundacion_romero_logo?e=1762387200&v=beta&t=L_sm7wwYWigl2d5OoYd4ls5-cz23Z4XNx2kZMI6Zfic",
+    "icono": "<i class=\"bi bi-emoji-smile-upside-down\"></i>"
+  },
+  {
+    "entidad": "HACKER MENTOR",
+    "tipo": "CURSO",
+    "activo": "SI",
+    "nombre_curso": "CIBERSEGURIDAD Y ETHICAL HACKING",
+    "fecha": "2025-10-15",
+    "link": "https://drive.google.com/file/d/13qqzHCcZXiwNyDD8hpYpa9zHkD5kYWoZ/view?usp=drive_link",
+    "img": "https://media.licdn.com/dms/image/v2/D4E0BAQHz-XHQ8ElZfA/company-logo_200_200/company-logo_200_200/0/1713385450325?e=1762387200&v=beta&t=VzH4FQfJav_qBokOWMfw9QQ00lvJVcY5DU4fbr88Kvs",
+    "icono": "<i class=\"bi bi-ubuntu\"></i>"
+  },
+  {
+    "entidad": "Skill",
+    "tipo": "CURSO",
+    "activo": "SI",
+    "nombre_curso": "POWER BI",
+    "fecha": "2025-02-01",
+    "link": "https://drive.google.com/file/d/1RENEToVBIz7KS0bE8FW1XWq-6eOFKl7M/view?usp=drive_link",
+    "img": "https://media.licdn.com/dms/image/v2/C4E0BAQEs6A_YkCwINQ/company-logo_200_200/company-logo_200_200/0/1630628744088?e=1762387200&v=beta&t=40RLDwp8x9BYFxno4NmT0p_Ln1sWDuoCkIp7kWdz9TI",
+    "icono": "<i class=\"bi bi-clipboard-data\"></i>"
+  },
+  {
+    "entidad": "Skill",
+    "tipo": "CURSO",
+    "activo": "SI",
+    "nombre_curso": "PYTHON FUNDAMENTALS",
+    "fecha": "2025-02-01",
+    "link": "https://drive.google.com/file/d/1Qs9YftTulsftaFZ4ITL8MqIFsnh4CIuX/view?usp=drive_link",
+    "img": "https://media.licdn.com/dms/image/v2/C4E0BAQEs6A_YkCwINQ/company-logo_200_200/company-logo_200_200/0/1630628744088?e=1762387200&v=beta&t=40RLDwp8x9BYFxno4NmT0p_Ln1sWDuoCkIp7kWdz9TI",
+    "icono": "<i class=\"bi bi-filetype-py\"></i>"
+  },
+  {
+    "entidad": "Skill",
+    "tipo": "CURSO",
+    "activo": "SI",
+    "nombre_curso": "SQL SERVER FUNDAMENTALS",
+    "fecha": "2024-11-01",
+    "link": "https://drive.google.com/file/d/1EHZ9DMHzApAYnRzqynVLVMHOT6mVPkOH/view?usp=drive_link",
+    "img": "https://media.licdn.com/dms/image/v2/C4E0BAQEs6A_YkCwINQ/company-logo_200_200/company-logo_200_200/0/1630628744088?e=1762387200&v=beta&t=40RLDwp8x9BYFxno4NmT0p_Ln1sWDuoCkIp7kWdz9TI",
+    "icono": "<i class=\"bi bi-filetype-sql\"></i>"
+  },
+  {
+    "entidad": "MUNICIPALIDAD DISTRITAL DE QUILMANA",
+    "tipo": "EXPERIENCIA",
+    "activo": "SI",
+    "nombre_curso": "PRACTICAS PREPROFESIONALES II",
+    "fecha": "2025-07-07",
+    "link": "https://drive.google.com/file/d/1chymfi8pfMOBIXUf8ftW7fG2xD_ZJn_v/view?usp=drive_link",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmYo_9zrKRyDEkZZW8ubF5vsf0-ZJMBRfuiC51ee_sOxmN6Hp3ACvE63PigggGwxuf7xU&usqp=CAU",
+    "icono": "Participé en la instalación y soporte de sistemas estatales (SIAF, SIGA, Assertus). Desarrollé el sistema interno de Help Desk “Portal_MDQ”, mejorando la gestión de incidencias y tiempos de respuesta. Brindé soporte técnico y mantenimiento de software a equipos institucionales."
+  },
+  {
+    "entidad": "MUNICIPALIDAD DISTRITAL DE QUILMANA",
+    "tipo": "EXPERIENCIA",
+    "activo": "SI",
+    "nombre_curso": "PRACTICAS PREPROFESIONALES I",
+    "fecha": "2024-11-27",
+    "link": "https://drive.google.com/file/d/13hvhXrK4OjQnmTHYy9j9vmirXXGUSPdm/view?usp=drive_link",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmYo_9zrKRyDEkZZW8ubF5vsf0-ZJMBRfuiC51ee_sOxmN6Hp3ACvE63PigggGwxuf7xU&usqp=CAU",
+    "icono": "Brindé soporte técnico a las distintas áreas de la institución. Participé en la instalación de cámaras de seguridad, mantenimiento de equipos e instalación de software, además de asistir a usuarios en la solución de incidencias."
+  },
+  {
+    "entidad": "The Open University",
+    "tipo": "CURSO",
+    "activo": "SI",
+    "nombre_curso": "SYSTEMS ENGINEERING: CHALLENGING COMPLEXITY",
+    "fecha": "2025-08-08",
+    "link": "https://drive.google.com/file/d/1BdbVVfS59mW4yabBbvfHnmQUeANEky1v/view?usp=drive_link",
+    "img": "https://media.licdn.com/dms/image/v2/C4E0BAQFJhiQCelJaSA/company-logo_200_200/company-logo_200_200/0/1655713019750/theopenuniversity_logo?e=1762387200&v=beta&t=Yi6INeN9ZPc-6HDEZrx1ayKDww5CiBKQBZH9XKXqWng",
+    "icono": "<i class=\"bi bi-vignette\"></i>"
+  },
+  {
+    "entidad": "UNIVERSIDAD NACIONAL DE CAÑETE",
+    "tipo": "EDUCACION",
+    "activo": "SI",
+    "nombre_curso": "CONSTANCIA DE EGRESADO",
+    "fecha": "2025-09-01",
+    "link": "https://drive.google.com/file/d/1C5vlA6hFe53exmfPIONpNVmUoLlQ17y6/view?usp=drive_link",
+    "img": "https://media.licdn.com/dms/image/v2/D4D0BAQHgaUebIc-FVQ/company-logo_200_200/company-logo_200_200/0/1708631191116?e=1762387200&v=beta&t=haNamL1AXMGzIDi0BntEGTs8S8st9-VzklANllaNW8E",
+    "icono": "NO"
+  },
+  {
+    "entidad": "UNIVERSIDAD NACIONAL DE CAÑETE",
+    "tipo": "EDUCACION",
+    "activo": "NO",
+    "nombre_curso": "CONSTANCIA DE PRACTICAS PREPROFESIONALES POR LA UNDC",
+    "fecha": "2025-08-22",
+    "link": "https://drive.google.com/file/d/1zHWNucusPRgrjlQHlL3wMHH-pFuGaXOn/view?usp=drive_link",
+    "img": "https://media.licdn.com/dms/image/v2/D4D0BAQHgaUebIc-FVQ/company-logo_200_200/company-logo_200_200/0/1708631191116?e=1762387200&v=beta&t=haNamL1AXMGzIDi0BntEGTs8S8st9-VzklANllaNW8E",
+    "icono": "NO"
+  },
+  {
+    "entidad": "UNDC",
+    "tipo": "CURSO",
+    "activo": "SI",
+    "nombre_curso": "VI Congreso Internacional de Ingeniería de Sistemas e Investigación Científica",
+    "fecha": "2024-10-30",
+    "link": "https://drive.google.com/file/d/1g86sku1CJrXS439VrL6Jy6d7E-gacJ47/view?usp=drive_link",
+    "img": "https://media.licdn.com/dms/image/v2/D4D0BAQHgaUebIc-FVQ/company-logo_200_200/company-logo_200_200/0/1708631191116?e=1762387200&v=beta&t=haNamL1AXMGzIDi0BntEGTs8S8st9-VzklANllaNW8E",
+    "icono": "<i class=\"bi bi-braces-asterisk\"></i>"
+  },
+  {
+    "entidad": "UNDC",
+    "tipo": "CURSO",
+    "activo": "SI",
+    "nombre_curso": "CONFERENCIA EN SOFTWARE DE DESARROLLO",
+    "fecha": "2022-09-30",
+    "link": "https://drive.google.com/file/d/1ANpqplggqJHfScXeFVkU1MFeub1FyleO/view?usp=drive_link",
+    "img": "https://media.licdn.com/dms/image/v2/D4D0BAQHgaUebIc-FVQ/company-logo_200_200/company-logo_200_200/0/1708631191116?e=1762387200&v=beta&t=haNamL1AXMGzIDi0BntEGTs8S8st9-VzklANllaNW8E",
+    "icono": "<i class=\"bi bi-braces-asterisk\"></i>"
+  },
+  {
+    "entidad": "WESTERN UNION",
+    "tipo": "EXPERIENCIA",
+    "activo": "SI",
+    "nombre_curso": "PRACTICAS PREPROFESIONALES",
+    "fecha": "2025-03-31",
+    "link": "https://drive.google.com/file/d/1kVC-Y5BbELdxVUMCuMeEw3cT9K8TMNk2/view?usp=drive_link",
+    "img": "https://media.licdn.com/dms/image/v2/C4E0BAQFX-w3SJJhaOw/company-logo_200_200/company-logo_200_200/0/1673279981250/western_union_logo?e=1762387200&v=beta&t=jSoiotQy3tq4DdHBYquVC9KzMZ753U8E7EWqyrQxjV0",
+    "icono": "Apoyé en la documentación técnica y en el desarrollo del plan de recuperación ante desastres (DRP). Elaboré manuales de usuario y diagramas de procesos para aplicaciones internas."
+  }
+]

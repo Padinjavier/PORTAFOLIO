@@ -147,3 +147,99 @@ document.querySelectorAll('.faq-question').forEach(btn => {
         btn.parentElement.classList.toggle('active');
     });
 });
+
+// ===================== CARGA DE DATOS DINÁMICOS =====================
+
+document.addEventListener("DOMContentLoaded", async () => {
+    const contEdu = document.getElementById("educacion");
+    const contCursos = document.getElementById("cursos");
+    const contExp = document.querySelector(".timeline");
+
+    try {
+        const response = await fetch("assets/js/datos.json");
+        const data = await response.json();
+
+        const educacion = data.filter(i => i.tipo === "EDUCACION" && i.activo === "SI");
+        const cursos = data.filter(i => i.tipo === "CURSO" && i.activo === "SI");
+        const experiencia = data.filter(i => i.tipo === "EXPERIENCIA" && i.activo === "SI");
+
+        const ordenar = arr => arr.sort((a, b) => new Date(b.fecha) - new Date(a.fecha));
+        ordenar(educacion); ordenar(cursos); ordenar(experiencia);
+
+        // ===================== EDUCACIÓN =====================
+        educacion.forEach(edu => {
+            const col = document.createElement("div");
+            col.className = "col-md-6";
+
+            const iconHTML = getIconHTML(edu);
+
+            col.innerHTML = `
+        <div class="edu-card">
+          <div class="edu-icon">${iconHTML}</div>
+          <div class="edu-info">
+            <h5 class="mb-1">${edu.nombre_curso}</h5>
+            <small class="text-muted">${edu.entidad} — ${new Date(edu.fecha).getFullYear()}</small>
+          </div>
+        </div>
+      `;
+            contEdu.appendChild(col);
+        });
+
+        // ===================== CURSOS =====================
+        cursos.forEach(curso => {
+            const col = document.createElement("div");
+            col.className = "col-lg-4 col-md-6";
+
+            const iconHTML = getIconHTML(curso);
+
+            col.innerHTML = `
+        <div class="curso-card">
+          ${iconHTML}
+          <div>${curso.nombre_curso}</div>
+          <small class="text-muted d-block mt-1">${curso.entidad} — ${new Date(curso.fecha).getFullYear()}</small>
+        </div>
+      `;
+            contCursos.appendChild(col);
+        });
+
+        // ===================== EXPERIENCIA =====================
+        experiencia.forEach(exp => {
+            const item = document.createElement("div");
+            item.className = "timeline-item";
+
+            const iconHTML = getIconHTML(exp);
+
+            item.innerHTML = `
+        <div class="timeline-dot"></div>
+        <div class="timeline-card glass animate-in ms-2">
+          <div class="timeline-meta">
+            <span class="company" style="display:flex; align-items:center; gap:0.5rem;">
+              ${iconHTML}${exp.entidad}
+            </span>
+            <span class="dates">${new Date(exp.fecha).getFullYear()}</span>
+          </div>
+          <h5 class="mb-2">${exp.nombre_curso}</h5>
+          <p class="mb-0">${exp.icono}</p>
+        </div>
+      `;
+            contExp.appendChild(item);
+        });
+
+    } catch (error) {
+        console.error("Error al cargar datos:", error);
+    }
+});
+
+// ===================== FUNCIÓN GLOBAL =====================
+function getIconHTML(item) {
+    // Prioridad 1: si tiene <i>, úsalo
+    if (item.icono && item.icono.includes("<i")) {
+        return item.icono;
+    }
+    // Prioridad 2: si tiene img, genera <img>
+    if (item.img) {
+        return `<img src="${item.img}" alt="${item.entidad}" class="logo-entidad">`;
+    }
+    // Prioridad 3: fallback genérico
+    return `<i class="bi bi-building"></i>`;
+}

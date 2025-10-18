@@ -8,7 +8,7 @@
 
 
 :root[data-theme="light"] {
-    --bs-gray-100: #f8f9fa;
+    --bs-gray-100: #b1b1b1;
     --bs-black: #000000;
     --bs-white: #ffffff;
     --bs-tertiary-color: rgba(33, 37, 41, 0.5);
@@ -4584,12 +4584,14 @@ fieldset:disabled .btn {
     margin-bottom: 0;
     list-style: none
 }
+
 .iconos-section {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
 }
+
 .navbar-nav .nav-link.active,
 .navbar-nav .nav-link.show {
     color: var(--bs-navbar-active-color)
@@ -4774,9 +4776,11 @@ fieldset:disabled .btn {
     .navbar-expand-lg .navbar-nav {
         flex-direction: row
     }
-.iconos-section{
- gap: 40px;
-}
+
+    .iconos-section {
+        gap: 40px;
+    }
+
     .navbar-expand-lg .navbar-nav .dropdown-menu {
         position: absolute
     }
@@ -6388,6 +6392,7 @@ fieldset:disabled .btn {
     .modal-xl {
         --bs-modal-width: 800px
     }
+
     /* --------------- */
 }
 
@@ -14178,7 +14183,7 @@ fieldset:disabled .btn {
     -webkit-backdrop-filter: blur(10px);
     border: 1px solid var(--bs-gray-700);
     border-radius: 16px;
-    box-shadow: 0 10px 24px var(--bs-tertiary-color);
+    box-shadow: 0 4px 12px var(--bs-tertiary-color);
 }
 
 .timeline-card {
@@ -14348,4 +14353,11 @@ fieldset:disabled .btn {
 
 .faq-item.active .faq-icon {
     transform: rotate(45deg);
+}
+
+.logo-entidad {
+    width: 2.5rem;
+    height: 2.5rem;
+    object-fit: contain;
+    border-radius: 25px;
 }
