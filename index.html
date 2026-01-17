@@ -459,7 +459,6 @@
   <p class="mb-0" style="font-size:14px; color:#555;">
     Creado por <strong>PadinJavier</strong> | Desarrollado con <strong>Capa-8</strong>
   </p>
-  <p id="contador"></p>
 </footer>
 
 <!-- Bootstrap JS -->
@@ -471,8 +470,8 @@
 <p id="contador">0</p>
 
 <script>
-(async () => {
-  const contador = document.getElementById("contador");
+(() => {
+  const el = document.getElementById("contador");
 
   let token = localStorage.getItem("visitor_token");
   if (!token) {
@@ -480,40 +479,30 @@
     localStorage.setItem("visitor_token", token);
   }
 
-  try {
-    const res = await fetch(
-      "https://script.google.com/macros/s/AKfycbxaP96pI6fwpUGbrrkZ8rBxBOalBL8fKF_52rXA6MnUAvF_oYLoO5VV68bgl1a8Cjuu/exec",
-      {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ token })
-      }
-    );
+  window.contadorCB = function (data) {
+    if (data.newVisit) {
+      let n = data.count - 1;
+      el.textContent = n;
+      const i = setInterval(() => {
+        n++;
+        el.textContent = n;
+        if (n >= data.count) clearInterval(i);
+      }, 60);
+    } else {
+      el.textContent = data.count;
+    }
+  };
 
-    const data = await res.json();
-    animarContador(contador, data.count, data.newVisit);
+  const s = document.createElement("script");
+  s.src =
+    "https://script.google.com/macros/s/AKfycbxSBLrD6KJPOzukGmHOiFGSvTREHxIumgj34TjNY-6ElQKy3S9KXjkcxhd6GHC0Ij0/exec"
+    + "?token=" + encodeURIComponent(token)
+    + "&callback=contadorCB";
 
-  } catch (e) {
-    console.error("Error contador:", e);
-  }
+  document.body.appendChild(s);
 })();
-
-function animarContador(el, total, animar) {
-  if (!animar) {
-    el.textContent = total;
-    return;
-  }
-
-  let n = total - 1;
-  el.textContent = n;
-
-  const interval = setInterval(() => {
-    n++;
-    el.textContent = n;
-    if (n >= total) clearInterval(interval);
-  }, 80);
-}
 </script>
+
 
 
 </html>
