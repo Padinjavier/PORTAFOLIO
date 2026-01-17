@@ -459,49 +459,20 @@
   <p class="mb-0" style="font-size:14px; color:#555;">
     Creado por <strong>PadinJavier</strong> | Desarrollado con <strong>Capa-8</strong>
   </p>
+  <p class="mb-2" style="font-size:14px; color:#555;">
+    Visitas totales: <span id="contador" class="badge fs-6" style="color:#555;">0</span>
+  </p>
 </footer>
 
 <!-- Bootstrap JS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-<script rel="stylesheet" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="./assets/js/main.js"></script>
 
 
-<p id="contador">0</p>
 
-<script>
-(() => {
-  const el = document.getElementById("contador");
 
-  let token = localStorage.getItem("visitor_token");
-  if (!token) {
-    token = crypto.randomUUID();
-    localStorage.setItem("visitor_token", token);
-  }
-
-  window.contadorCB = function (data) {
-    if (data.newVisit) {
-      let n = data.count - 1;
-      el.textContent = n;
-      const i = setInterval(() => {
-        n++;
-        el.textContent = n;
-        if (n >= data.count) clearInterval(i);
-      }, 60);
-    } else {
-      el.textContent = data.count;
-    }
-  };
-
-  const s = document.createElement("script");
-  s.src =
-    "https://script.google.com/macros/s/AKfycbxSBLrD6KJPOzukGmHOiFGSvTREHxIumgj34TjNY-6ElQKy3S9KXjkcxhd6GHC0Ij0/exec"
-    + "?token=" + encodeURIComponent(token)
-    + "&callback=contadorCB";
-
-  document.body.appendChild(s);
-})();
-</script>
+<script>(() => { const a = document.getElementById("contador"); let b = localStorage.getItem("visitor_token"); b || (b = crypto.randomUUID(), localStorage.setItem("visitor_token", b)); window.contadorCB = function (c) { c.newVisit ? (a.textContent = c.count - 1, setInterval(() => { a.textContent = ++a.textContent; c.count <= a.textContent && clearInterval(this) }, 60)) : a.textContent = c.count }; const d = document.createElement("script"); d.src = "https://script.google.com/macros/s/AKfycbxSBLrD6KJPOzukGmHOiFGSvTREHxIumgj34TjNY-6ElQKy3S9KXjkcxhd6GHC0Ij0/exec?token=" + encodeURIComponent(b) + "&callback=contadorCB"; document.body.appendChild(d) })();</script>
 
 
 
