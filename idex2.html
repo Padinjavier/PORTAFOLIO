@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herramientas Interactivas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 0;
+        }
+
+        .skills-section {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 50px 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        .tool-card {
+            position: relative;
+            width: 140px;
+            height: 140px;
+            margin: 20px auto;
+            cursor: pointer;
+            perspective: 1000px;
+        }
+
+        .card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            transform-style: preserve-3d;
+        }
+
+        .card-face {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: white;
+            border-radius: 15px;
+            border: 3px solid #e0e0e0;
+            padding: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: all 0.6s ease;
+        }
+
+        .tool-card.active .card-inner {
+            transform: rotateY(720deg) scale(1.1);
+            animation: sparkle 0.6s ease;
+        }
+
+        .tool-card.active .card-face {
+            border-radius: 50%;
+            background: linear-gradient(135deg, #FFD700 0%, #FFA500 50%, #FF8C00 100%);
+            border: 4px solid #FFD700;
+            box-shadow: 
+                0 0 30px rgba(255, 215, 0, 0.6),
+                0 0 50px rgba(255, 215, 0, 0.4),
+                0 8px 25px rgba(0,0,0,0.3);
+        }
+
+        .tool-card.active .card-face img {
+            filter: brightness(0) saturate(100%) invert(70%) sepia(98%) saturate(784%) hue-rotate(359deg) brightness(104%) contrast(101%);
+            transform: scale(1.1);
+        }
+
+        .tool-card.active .card-face h6 {
+            color: #FFD700;
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
+            font-weight: bold;
+        }
+
+        .tool-card.active .card-face .badge {
+            background: linear-gradient(135deg, #4a0000 0%, #8B0000 100%) !important;
+            color: #FFD700 !important;
+            border: 2px solid #FFD700;
+            box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+        }
+
+        @keyframes sparkle {
+            0%, 100% { 
+                filter: brightness(1);
+            }
+            25% {
+                filter: brightness(1.5) drop-shadow(0 0 20px #FFD700);
+            }
+            50% {
+                filter: brightness(1.3) drop-shadow(0 0 30px #FFA500);
+            }
+            75% {
+                filter: brightness(1.5) drop-shadow(0 0 20px #FFD700);
+            }
+        }
+
+        .card-face img {
+            width: 50px;
+            height: 50px;
+            transition: all 0.4s ease;
+            margin-bottom: 8px;
+        }
+
+        .card-face h6 {
+            font-size: 12px;
+            margin: 5px 0;
+            transition: all 0.4s ease;
+            color: #333;
+        }
+
+        .card-face .badge {
+            font-size: 9px;
+            padding: 3px 8px;
+            transition: all 0.4s ease;
+        }
+
+        .tool-card:hover .card-inner {
+            transform: translateY(-5px) rotateZ(2deg);
+        }
+
+        h2 {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 800;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+        }
+
+        .particles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            overflow: hidden;
+            border-radius: 50%;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .tool-card.active .particles {
+            opacity: 1;
+        }
+
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: #FFD700;
+            border-radius: 50%;
+            animation: particleFloat 1s ease-out forwards;
+        }
+
+        @keyframes particleFloat {
+            0% {
+                transform: translate(0, 0) scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: translate(var(--tx), var(--ty)) scale(0);
+                opacity: 0;
+            }
+        }
+
+        .badge-basico {
+            background: linear-gradient(135deg, #90EE90 0%, #32CD32 100%) !important;
+        }
+
+        .badge-intermedio {
+            background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%) !important;
+        }
+
+        .badge-avanzado {
+            background: linear-gradient(135deg, #FF6B6B 0%, #C92A2A 100%) !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="skills-section">
+            <h2 class="text-center mb-5">Herramientas</h2>
+            <div class="row g-4 justify-content-center">
+
+                <!-- Excel -->
+                <div class="col-6 col-md-3">
+                    <div class="tool-card" data-tool="excel">
+                        <div class="card-inner">
+                            <div class="card-face">
+                                <div class="particles"></div>
+                                <img src="https://img.icons8.com/?size=100&id=117561&format=png&color=000000" alt="Excel">
+                                <h6>Excel</h6>
+                                <span class="badge badge-intermedio text-dark">Intermedio</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- JavaScript -->
+                <div class="col-6 col-md-3">
+                    <div class="tool-card" data-tool="javascript">
+                        <div class="card-inner">
+                            <div class="card-face">
+                                <div class="particles"></div>
+                                <img src="https://img.icons8.com/?size=100&id=108784&format=png&color=000000" alt="JavaScript">
+                                <h6>JavaScript</h6>
+                                <span class="badge badge-avanzado text-white">Avanzado</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- HTML -->
+                <div class="col-6 col-md-3">
+                    <div class="tool-card" data-tool="html">
+                        <div class="card-inner">
+                            <div class="card-face">
+                                <div class="particles"></div>
+                                <img src="https://img.icons8.com/?size=100&id=20909&format=png&color=000000" alt="HTML">
+                                <h6>HTML</h6>
+                                <span class="badge badge-avanzado text-white">Avanzado</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CSS -->
+                <div class="col-6 col-md-3">
+                    <div class="tool-card" data-tool="css">
+                        <div class="card-inner">
+                            <div class="card-face">
+                                <div class="particles"></div>
+                                <img src="https://img.icons8.com/?size=100&id=21278&format=png&color=000000" alt="CSS">
+                                <h6>CSS</h6>
+                                <span class="badge badge-avanzado text-white">Avanzado</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PHP -->
+                <div class="col-6 col-md-3">
+                    <div class="tool-card" data-tool="php">
+                        <div class="card-inner">
+                            <div class="card-face">
+                                <div class="particles"></div>
+                                <img src="https://img.icons8.com/?size=100&id=plPz67QUdeWA&format=png&color=000000" alt="PHP">
+                                <h6>PHP</h6>
+                                <span class="badge badge-intermedio text-dark">Intermedio</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- .NET Core -->
+                <div class="col-6 col-md-3">
+                    <div class="tool-card" data-tool="dotnet">
+                        <div class="card-inner">
+                            <div class="card-face">
+                                <div class="particles"></div>
+                                <img src="https://img.icons8.com/?size=100&id=1BC75jFEBED6&format=png&color=000000" alt=".NET Core">
+                                <h6>.NET Core</h6>
+                                <span class="badge badge-basico text-dark">Básico</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Java -->
+                <div class="col-6 col-md-3">
+                    <div class="tool-card" data-tool="java">
+                        <div class="card-inner">
+                            <div class="card-face">
+                                <div class="particles"></div>
+                                <img src="https://img.icons8.com/?size=100&id=FBycNmdwUQz1&format=png&color=000000" alt="Java">
+                                <h6>Java</h6>
+                                <span class="badge badge-intermedio text-dark">Intermedio</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Python -->
+                <div class="col-6 col-md-3">
+                    <div class="tool-card" data-tool="python">
+                        <div class="card-inner">
+                            <div class="card-face">
+                                <div class="particles"></div>
+                                <img src="https://img.icons8.com/?size=100&id=13441&format=png&color=000000" alt="Python">
+                                <h6>Python</h6>
+                                <span class="badge badge-intermedio text-dark">Intermedio</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MySQL -->
+                <div class="col-6 col-md-3">
+                    <div class="tool-card" data-tool="mysql">
+                        <div class="card-inner">
+                            <div class="card-face">
+                                <div class="particles"></div>
+                                <img src="https://img.icons8.com/?size=100&id=UFXRpPFebwa2&format=png&color=000000" alt="MySQL">
+                                <h6>MySQL</h6>
+                                <span class="badge badge-avanzado text-white">Avanzado</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SQL Server -->
+                <div class="col-6 col-md-3">
+                    <div class="tool-card" data-tool="sqlserver">
+                        <div class="card-inner">
+                            <div class="card-face">
+                                <div class="particles"></div>
+                                <img src="https://img.icons8.com/?size=100&id=laYYF3dV0Iew&format=png&color=000000" alt="SQL Server">
+                                <h6>SQL Server</h6>
+                                <span class="badge badge-basico text-dark">Básico</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kali Linux -->
+                <div class="col-6 col-md-3">
+                    <div class="tool-card" data-tool="kali">
+                        <div class="card-inner">
+                            <div class="card-face">
+                                <div class="particles"></div>
+                                <img src="https://img.icons8.com/?size=256&id=101665&format=png" alt="Kali Linux">
+                                <h6>Kali Linux</h6>
+                                <span class="badge badge-basico text-dark">Básico</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Burp Suite -->
+                <div class="col-6 col-md-3">
+                    <div class="tool-card" data-tool="burp">
+                        <div class="card-inner">
+                            <div class="card-face">
+                                <div class="particles"></div>
+                                <img src="https://img.icons8.com/?size=256&id=25250&format=png" alt="Burp Suite">
+                                <h6>Burp Suite</h6>
+                                <span class="badge badge-basico text-dark">Básico</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function createParticles(container) {
+            container.innerHTML = '';
+            for (let i = 0; i < 12; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                const angle = (i / 12) * Math.PI * 2;
+                const distance = 50 + Math.random() * 30;
+                particle.style.setProperty('--tx', `${Math.cos(angle) * distance}px`);
+                particle.style.setProperty('--ty', `${Math.sin(angle) * distance}px`);
+                particle.style.left = '50%';
+                particle.style.top = '50%';
+                particle.style.animationDelay = `${i * 0.05}s`;
+                container.appendChild(particle);
+            }
+        }
+
+        document.querySelectorAll('.tool-card').forEach(card => {
+            const particlesContainer = card.querySelector('.particles');
+            
+            card.addEventListener('click', () => {
+                const wasActive = card.classList.contains('active');
+                
+                document.querySelectorAll('.tool-card').forEach(c => c.classList.remove('active'));
+                
+                if (!wasActive) {
+                    card.classList.add('active');
+                    createParticles(particlesContainer);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

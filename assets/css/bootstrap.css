@@ -14040,7 +14040,6 @@ fieldset:disabled .btn {
 .tool-card {
     background: var(--bs-white);
     border-radius: 15px;
-    box-shadow: 0 4px 12px var(--bs-tertiary-color);
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 

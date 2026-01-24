@@ -249,6 +249,38 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 });
 
+// Herramientas interactivas
+function createParticles(container) {
+    container.innerHTML = '';
+    for (let i = 0; i < 12; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+        const angle = (i / 12) * Math.PI * 2;
+        const distance = 50 + Math.random() * 30;
+        particle.style.setProperty('--tx', `${Math.cos(angle) * distance}px`);
+        particle.style.setProperty('--ty', `${Math.sin(angle) * distance}px`);
+        particle.style.left = '50%';
+        particle.style.top = '50%';
+        particle.style.animationDelay = `${i * 0.05}s`;
+        container.appendChild(particle);
+    }
+}
+
+document.querySelectorAll('.tool-card').forEach(card => {
+    const particlesContainer = card.querySelector('.particles');
+    
+    card.addEventListener('click', () => {
+        const wasActive = card.classList.contains('active');
+        
+        document.querySelectorAll('.tool-card').forEach(c => c.classList.remove('active'));
+        
+        if (!wasActive) {
+            card.classList.add('active');
+            createParticles(particlesContainer);
+        }
+    });
+});
+
 // ===================== FUNCIÓN GLOBAL =====================
 function getIconHTML(item) {
     // Prioridad 1: si tiene <i>, úsalo
