@@ -1,7 +1,7 @@
 [
   {
     "entidad": "CISCO",
-    "tipo": "CURSO",
+    "tipo": "CERTIFICACION",
     "activo": "SI",
     "nombre_curso": "INTRODUCTION TO INTERNET OF THINGS",
     "fecha": "2025-08-05",
@@ -11,7 +11,7 @@
   },
   {
     "entidad": "CISCO",
-    "tipo": "CURSO",
+    "tipo": "CERTIFICACION",
     "activo": "SI",
     "nombre_curso": "INTRODUCTION TO CYBERSECURITY",
     "fecha": "2025-08-03",
@@ -186,7 +186,7 @@
     "nombre_curso": "CONSTANCIA DE EGRESADO",
     "fecha": "2025-09-01",
     "link": "https://drive.google.com/file/d/1C5vlA6hFe53exmfPIONpNVmUoLlQ17y6/view?usp=drive_link",
-    "img": "https://media.licdn.com/dms/image/v2/D4D0BAQHgaUebIc-FVQ/company-logo_200_200/company-logo_200_200/0/1708631191116?e=1762387200&v=beta&t=haNamL1AXMGzIDi0BntEGTs8S8st9-VzklANllaNW8E",
+    "img": "https://web.undc.edu.pe/wp-content/uploads/2022/01/LOGO-UNDC-220-220-2.jpg",
     "icono": "NO"
   },
   {

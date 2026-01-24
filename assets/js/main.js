@@ -153,6 +153,7 @@ document.querySelectorAll('.faq-question').forEach(btn => {
 document.addEventListener("DOMContentLoaded", async () => {
     const contEdu = document.getElementById("educacion");
     const contCursos = document.getElementById("cursos");
+    const contCert = document.getElementById("certificaciones");
     const contExp = document.querySelector(".timeline");
 
     try {
@@ -161,10 +162,11 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         const educacion = data.filter(i => i.tipo === "EDUCACION" && i.activo === "SI");
         const cursos = data.filter(i => i.tipo === "CURSO" && i.activo === "SI");
+        const certificaciones = data.filter(i => i.tipo === "CERTIFICACION" && i.activo === "SI");
         const experiencia = data.filter(i => i.tipo === "EXPERIENCIA" && i.activo === "SI");
 
         const ordenar = arr => arr.sort((a, b) => new Date(b.fecha) - new Date(a.fecha));
-        ordenar(educacion); ordenar(cursos); ordenar(experiencia);
+        ordenar(educacion); ordenar(cursos); ordenar(certificaciones); ordenar(experiencia);
 
         // ===================== EDUCACIÓN =====================
         educacion.forEach(edu => {
@@ -200,6 +202,23 @@ document.addEventListener("DOMContentLoaded", async () => {
         </div>
       `;
             contCursos.appendChild(col);
+        });
+
+        // ===================== CERTIFICACIONES =====================
+        certificaciones.forEach(cert => {
+            const col = document.createElement("div");
+            col.className = "col-lg-4 col-md-6";
+
+            const iconHTML = getIconHTML(cert);
+
+            col.innerHTML = `
+        <div class="cert-card">
+          ${iconHTML}
+          <div>${cert.nombre_curso}</div>
+          <small class="text-white d-block mt-1">${cert.entidad} — ${new Date(cert.fecha).getFullYear()}</small>
+        </div>
+      `;
+            contCert.appendChild(col);
         });
 
         // ===================== EXPERIENCIA =====================

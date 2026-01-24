@@ -145,7 +145,7 @@
   <br id="herramientas">
   <section class="py-5 bg-light">
     <div class="container text-center">
-      <h2 class="mb-4 fw-bold">Herramientas de primer nivel para obtener resultados excepcionales</h2>
+      <h2 class="mb-4 fw-bold">Herramientas</h2>
       <div class="row g-4 justify-content-center">
 
         <!-- Excel -->
@@ -199,7 +199,7 @@
             <img src="https://img.icons8.com/?size=100&id=1BC75jFEBED6&format=png&color=000000" width="60"
               alt=".NET Core">
             <h6 class="mt-2">.NET Core</h6>
-            <span class="badge bg-warning text-dark">Intermedio</span>
+            <span class="badge bg-warning text-dark">Básico</span>
           </div>
         </div>
 
@@ -236,7 +236,7 @@
             <img src="https://img.icons8.com/?size=100&id=laYYF3dV0Iew&format=png&color=000000" width="60"
               alt="SQL Server">
             <h6 class="mt-2">SQL Server</h6>
-            <span class="badge bg-warning text-dark">Intermedio</span>
+            <span class="badge bg-warning text-dark">Básico</span>
           </div>
         </div>
 
@@ -245,7 +245,7 @@
           <div class="tool-card p-3">
             <img src="https://img.icons8.com/?size=256&id=101665&format=png" width="60" alt="Kali Linux">
             <h6 class="mt-2">Kali Linux</h6>
-            <span class="badge bg-warning text-dark">Intermedio</span>
+            <span class="badge bg-warning text-dark">Básico</span>
           </div>
         </div>
 
@@ -254,7 +254,7 @@
           <div class="tool-card p-3">
             <img src="https://img.icons8.com/?size=256&id=25250&format=png" width="60" alt="Burp Suite">
             <h6 class="mt-2">Burp Suite</h6>
-            <span class="badge bg-warning text-dark">Intermedio</span>
+            <span class="badge bg-warning text-dark">Básico</span>
           </div>
         </div>
 
@@ -301,11 +301,24 @@
     <div class="container">
       <div class="text-center mb-5">
         <h2 class="display-6 fw-bold text-warning">
-          <i class="bi bi-award-fill me-2"></i>Certificaciones y Cursos
+          <i class="bi bi-award-fill me-2"></i>Cursos
         </h2>
         <p class="text-muted">Formaciones complementarias y especializaciones.</p>
       </div>
       <div class="row g-4" id="cursos"></div>
+    </div>
+  </section>
+
+  <!-- ===================== CERTIFICACIONES ===================== -->
+  <section class="certifications-section py-5 bg-light">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="display-6 fw-bold text-info">
+          <i class="bi bi-trophy-fill me-2"></i>Certificaciones
+        </h2>
+        <p class="text-muted">Certificaciones obtenidas y reconocimientos.</p>
+      </div>
+      <div class="row g-4" id="certificaciones"></div>
     </div>
   </section>
 
@@ -362,6 +375,29 @@
       font-size: 2rem;
       margin-bottom: 0.5rem;
       color: #212529;
+    }
+
+    /* === CERTIFICACIONES === */
+    .certifications-section .cert-card {
+      background: linear-gradient(135deg, #17a2b8, #138496);
+      border-radius: 16px;
+      padding: 1.5rem;
+      text-align: center;
+      color: #fff;
+      font-weight: 500;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+      transition: all 0.3s ease;
+    }
+
+    .certifications-section .cert-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+    }
+
+    .certifications-section .cert-card i {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      color: #fff;
     }
 
     @media (max-width: 768px) {
