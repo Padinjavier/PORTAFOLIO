@@ -729,8 +729,57 @@
 
 
 
-<script>(() => { const a = document.getElementById("contador"); let b = localStorage.getItem("visitor_token"); b || (b = crypto.randomUUID(), localStorage.setItem("visitor_token", b)); window.contadorCB = function (c) { c.newVisit ? (a.textContent = c.count - 1, setInterval(() => { a.textContent = ++a.textContent; c.count <= a.textContent && clearInterval(this) }, 60)) : a.textContent = c.count }; const d = document.createElement("script"); d.src = "https://script.google.com/macros/s/AKfycbxSBLrD6KJPOzukGmHOiFGSvTREHxIumgj34TjNY-6ElQKy3S9KXjkcxhd6GHC0Ij0/exec?token=" + encodeURIComponent(b) + "&callback=contadorCB"; document.body.appendChild(d) })();</script>
+<p id="contador">0</p>
+<script>
+(() => {
+  const el = document.getElementById("contador");
+  let token = localStorage.getItem("visitor_token");
+  if (!token) {
+    token = crypto.randomUUID();
+    localStorage.setItem("visitor_token", token);
+  }
 
+  window.contadorCB = function (data) {
+    if (data.newVisit) {
+      let n = data.count - 1;
+      el.textContent = n;
+      const i = setInterval(() => {
+        n++;
+        el.textContent = n;
+        if (n >= data.count) clearInterval(i);
+      }, 60);
+    } else {
+      el.textContent = data.count;
+    }
+  };
 
+  // Primero obtenemos IP con datos extra, luego enviamos todo
+  fetch('https://ipapi.co/json/')
+    .then(r => r.json())
+    .then(ipData => {
+      const params = new URLSearchParams({
+        token,
+        callback: 'contadorCB',
+        ip:         ipData.ip,
+        ciudad:     ipData.city,
+        pais:       ipData.country_name,
+        isp:        ipData.org,
+        timezone:   ipData.timezone,
+        idioma:     navigator.language,
+        pantalla:   screen.width + 'x' + screen.height,
+        dispositivo: /Mobi|Android/i.test(navigator.userAgent) ? 'Móvil' : 'Escritorio',
+        navegador:  navigator.userAgent,
+        ram:        navigator.deviceMemory ?? 'N/A',
+        nucleos:    navigator.hardwareConcurrency ?? 'N/A',
+        referrer:   document.referrer || 'directo',
+      });
+
+      const s = document.createElement('script');
+      s.src = 'https://script.google.com/macros/s/AKfycbxSBLrD6KJPOzukGmHOiFGSvTREHxIumgj34TjNY-6ElQKy3S9KXjkcxhd6GHC0Ij0/exec?' + params;
+      document.body.appendChild(s);
+    });
+})();
+</script>
+  
 
 </html>
